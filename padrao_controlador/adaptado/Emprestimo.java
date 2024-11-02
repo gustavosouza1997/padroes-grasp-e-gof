@@ -1,4 +1,4 @@
-package padrao_controlador.original;
+package padrao_controlador.adaptado;
 
 import java.time.LocalDate; 
 import java.time.temporal.ChronoUnit; 
@@ -40,12 +40,7 @@ public class Emprestimo {
     public double calcularMulta() { 
         long diasAtraso = ChronoUnit.DAYS.between(dataDeDevolucao,  LocalDate.now()); 
         double multaPorDia = 2.0; 
-        
-        if (diasAtraso > 0) { 
-            return diasAtraso * multaPorDia; 
-        } 
-        
-        return 0.0;           
+        return diasAtraso > 0 ? diasAtraso * multaPorDia : 0.0;  
     } 
 
     // Verifica se o livro está em atraso 

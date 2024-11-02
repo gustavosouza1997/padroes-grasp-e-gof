@@ -2,8 +2,6 @@ package padrao_controlador.original;
 
 import java.time.LocalDate; 
 
-// Classe de teste para o sistema mal projetado 
-
 // Classe de teste com múltiplas funcionalidades mal projetadas import java.time.LocalDate; 
 public class TesteBibliotecaMalProjetada { 
     public static void main(String[] args) { 
@@ -35,7 +33,8 @@ public class TesteBibliotecaMalProjetada {
         
         for (Emprestimo emprestimo : biblioteca.getEmprestimos()) {  
             if (!emprestimo.isDevolvido()) { 
-                double multa = emprestimo.calcularMulta();  System.out.println("Usuário: " + emprestimo.getNomeDoUsuario() + ", Livro: " + emprestimo.getLivro().getTitulo() + ", Multa: R$ " + multa);  
+                double multa = emprestimo.calcularMulta(); 
+                System.out.println("Usuário: " + emprestimo.getNomeDoUsuario() + ", Livro: " + emprestimo.getLivro().getTitulo() + ", Multa: R$ " + multa);  
             } 
         }
 

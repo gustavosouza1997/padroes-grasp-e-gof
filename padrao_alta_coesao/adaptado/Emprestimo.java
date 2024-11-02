@@ -1,8 +1,9 @@
-package padrao_controlador.original;
+package padrao_alta_coesao.adaptado;
 
 import java.time.LocalDate; 
 import java.time.temporal.ChronoUnit; 
 
+// Classe que representa um empréstimo de livro 
 public class Emprestimo { 
     private Livro livro; 
     private String nomeDoUsuario; 
@@ -36,19 +37,13 @@ public class Emprestimo {
         return livro; 
     } 
 
-    // Método que calcula a multa, se houver atraso 
     public double calcularMulta() { 
         long diasAtraso = ChronoUnit.DAYS.between(dataDeDevolucao,  LocalDate.now()); 
         double multaPorDia = 2.0; 
-        
-        if (diasAtraso > 0) { 
-            return diasAtraso * multaPorDia; 
-        } 
-        
-        return 0.0;           
+    
+        return diasAtraso > 0 ? diasAtraso * multaPorDia : 0.0;  
     } 
 
-    // Verifica se o livro está em atraso 
     public boolean estaAtrasado() { 
         return LocalDate.now().isAfter(dataDeDevolucao) && !devolvido;  
     } 
@@ -57,4 +52,4 @@ public class Emprestimo {
     public String toString() { 
         return "Livro: " + livro.getTitulo() + ", Usuário: " +  nomeDoUsuario + ", Data de Devolução: " + dataDeDevolucao;  
     } 
-}  
+} 
