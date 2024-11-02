@@ -1,69 +1,34 @@
 package padrao_alta_coesao.adaptado;
 
-import java.time.LocalDate; 
-import java.util.ArrayList; 
-import java.util.List;
+import java.time.LocalDate;
 
 // Classe com baixa coesão - Biblioteca faz várias tarefas não  relacionadas 
 public class Biblioteca { 
-    private List<Livro> livros; // Gerencia os livros  
-    private List<Emprestimo> emprestimos; // Gerencia os empréstimos 
+    private LivroController livroController;
+    private EmprestimoController emprestimoController;
     
     public Biblioteca() { 
-        this.livros = new ArrayList<>(); 
-        this.emprestimos = new ArrayList<>(); 
+        this.livroController = new LivroController(); 
+        this.emprestimoController = new EmprestimoController();
     } 
 
-    // Função para adicionar um livro 
+    // Modificado para chamar o método adicionarLivro de LivroController
     public void adicionarLivro(String titulo) { 
-        Livro livro = new Livro(titulo); 
-        livros.add(livro); 
-        System.out.println("Livro \"" + titulo + "\" adicionado à  biblioteca."); 
+        livroController.adicionarLivro(titulo);
     } 
 
-    // Função para registrar um empréstimo 
+    // Modificado para chamar o método registrarEmprestimo de EmprestimoController e passar o livro encontrado pelo livroController 
     public void registrarEmprestimo(String tituloDoLivro, String  nomeDoUsuario, LocalDate dataDeDevolucao) { 
-        Livro livro = encontrarLivro(tituloDoLivro);
-        
-        if (livro != null) { 
-            Emprestimo emprestimo = new Emprestimo(livro,  nomeDoUsuario, dataDeDevolucao); 
-            emprestimos.add(emprestimo); 
-            System.out.println("Empréstimo registrado: Livro \"" +  tituloDoLivro + "\" para " + nomeDoUsuario); 
-        } else { 
-            System.out.println("Erro: Livro \"" + tituloDoLivro + "\"  não encontrado."); 
-        } 
+        emprestimoController.registrarEmprestimo(livroController.encontrarLivro(tituloDoLivro), nomeDoUsuario, dataDeDevolucao);
     } 
 
-    // Função para devolver um livro 
+    // Modificado para chamar o método devolverLivro de EmprestimoController e passar o livro encontrado pelo livroController 
     public void devolverLivro(String tituloDoLivro) {  
-        for (Emprestimo emprestimo : emprestimos) { 
-            if (emprestimo.getLivro().getTitulo().equals(tituloDoLivro) && !emprestimo.isDevolvido()) { 
-                emprestimo.setDevolvido(true); 
-                System.out.println("Livro \"" + tituloDoLivro + "\"  devolvido com sucesso."); 
-                return; 
-            } 
-        } 
-
-        System.out.println("Erro: Livro \"" + tituloDoLivro + "\" não  encontrado ou já devolvido."); 
+        emprestimoController.devolverLivro(livroController.encontrarLivro(tituloDoLivro));
     }
      
-    // Função para calcular multas de todos os empréstimos  
+    // Modificado para chamar o método calcularMultas de EmprestimoController
     public void calcularMultas() { 
-        for (Emprestimo emprestimo : emprestimos) { 
-            if (!emprestimo.isDevolvido()) { 
-                double multa = emprestimo.calcularMulta();  System.out.println("Usuário: " + emprestimo.getNomeDoUsuario() + ", Multa: R$ " + multa);  
-            } 
-        } 
+        emprestimoController.calcularMultas();
     }
-
-    // Função para encontrar um livro pelo título 
-    private Livro encontrarLivro(String titulo) { 
-        for (Livro livro : livros) { 
-            if (livro.getTitulo().equals(titulo)) { 
-                return livro; 
-            } 
-        } 
-
-        return null; 
-    } 
 } 
