@@ -1,4 +1,4 @@
-package padrao_fachada.original;
+package padrao_fachada.adaptado;
 
 import java.time.LocalDate;
 
@@ -8,4 +8,4 @@ public class CalculadoraDeMultas {
         long diasAtraso = LocalDate.now().toEpochDay() - emprestimo.getDataDeDevolucao().toEpochDay(); 
         return diasAtraso > 0 ? diasAtraso * 2.0 : 0.0; 
     } 
-}   
+}

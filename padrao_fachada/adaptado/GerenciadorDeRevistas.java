@@ -1,4 +1,4 @@
-package padrao_fachada.original;
+package padrao_fachada.adaptado;
 
 import java.util.ArrayList;
 import java.util.List;
