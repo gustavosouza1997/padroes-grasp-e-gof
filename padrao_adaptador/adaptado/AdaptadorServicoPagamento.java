@@ -1,4 +1,4 @@
-package padrao_adapter.adaptado;
+package padrao_adaptador.adaptado;
 
 // Implementação do adaptador que adapta o ServicoPagamentoExterno para a interface ServicoPagamento
 public class AdaptadorServicoPagamento implements ServicoPagamento {

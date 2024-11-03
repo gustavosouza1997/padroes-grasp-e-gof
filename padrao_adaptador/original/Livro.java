@@ -1,4 +1,4 @@
-package padrao_adapter.original;
+package padrao_adaptador.original;
 
 // Classe que representa um livro 
 public class Livro {

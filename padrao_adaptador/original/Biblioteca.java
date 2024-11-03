@@ -1,4 +1,4 @@
-package padrao_adapter.original;
+package padrao_adaptador.original;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package padrao_adapter.adaptado;
+package padrao_adaptador.adaptado;
 
 import java.time.LocalDate;
 

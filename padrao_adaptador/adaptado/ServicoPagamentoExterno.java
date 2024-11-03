@@ -1,4 +1,4 @@
-package padrao_adapter.adaptado;
+package padrao_adaptador.adaptado;
 
 // Interface externa de serviço de pagamento 
 class ServicoPagamentoExterno {

@@ -1,4 +1,4 @@
-package padrao_adapter.adaptado;
+package padrao_adaptador.adaptado;
 
 // Interface de serviço de pagamento
 public interface ServicoPagamento {
