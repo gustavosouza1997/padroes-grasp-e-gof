@@ -4,9 +4,11 @@ public class ConfiguracaoBiblioteca {
     private String horariosDeFuncionamento;
     private double valorMultaDiaria;
 
+    // Instância única de ConfiguracaoBiblioteca
     private static ConfiguracaoBiblioteca configuracaoBiblioteca;
 
-    public ConfiguracaoBiblioteca(String horariosDeFuncionamento, double valorMultaDiaria) {
+    // Construtor privado para impedir a criação de instâncias de ConfiguracaoBiblioteca
+    private ConfiguracaoBiblioteca(String horariosDeFuncionamento, double valorMultaDiaria) {
         this.horariosDeFuncionamento = horariosDeFuncionamento;
         this.valorMultaDiaria = valorMultaDiaria;
     }
