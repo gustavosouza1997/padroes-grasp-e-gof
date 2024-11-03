@@ -2,7 +2,7 @@ package padrao_alta_coesao.adaptado;
 
 import java.time.LocalDate;
 
-// Classe com baixa coesão - Biblioteca faz várias tarefas não  relacionadas 
+// Classe corrigida para alta coesão 
 public class Biblioteca { 
     private LivroController livroController;
     private EmprestimoController emprestimoController;
