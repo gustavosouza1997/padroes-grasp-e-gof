@@ -1,5 +1,6 @@
-package padrao_observer.original;
+package padrao_observador.original;
 
+// Classe que representa um livro 
 public class Livro {
     private String titulo;
     private String autor;

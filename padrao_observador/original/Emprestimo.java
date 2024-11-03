@@ -1,7 +1,8 @@
-package padrao_observer.original;
+package padrao_observador.original;
 
 import java.time.LocalDate;
 
+// Classe que representa um empréstimo 
 public class Emprestimo { 
     private Livro livro; 
     private Usuario usuario; 
@@ -38,4 +39,4 @@ public class Emprestimo {
     public long diasParaDevolucao() { 
         return LocalDate.now().toEpochDay() - dataDeDevolucao.toEpochDay(); 
     } 
-}  
+}

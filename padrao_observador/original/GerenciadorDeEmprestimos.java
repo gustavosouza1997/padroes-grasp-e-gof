@@ -1,9 +1,9 @@
-package padrao_observer.original;
+package padrao_observador.original;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+// Classe responsável por gerenciar os empréstimos e notificar  usuários manualmente 
 public class GerenciadorDeEmprestimos { 
     private List<Emprestimo> emprestimos; 
 

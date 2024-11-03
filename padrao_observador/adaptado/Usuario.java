@@ -1,5 +1,6 @@
-package padrao_observer.original;
+package padrao_observador.adaptado;
 
+// Classe que representa um usuário 
 public class Usuario { 
     private String nome; 
     private String email;
