@@ -1,5 +1,6 @@
-package padrao_composite.original;
+package padrao_composto.original;
 
+// Classe que representa um livro 
 public class Livro {
     private String titulo;
     private String autor;

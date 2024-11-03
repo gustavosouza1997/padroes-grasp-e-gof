@@ -1,8 +1,9 @@
-package padrao_composite.original;
+package padrao_composto.original;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe que representa uma coleção de livros ou revistas
 public class ColecaoDeMidias { 
     private String nome; 
     private List<Livro> livros; 
@@ -36,4 +37,4 @@ public class ColecaoDeMidias {
             System.out.println(revista); 
         } 
     } 
-}   
+} 

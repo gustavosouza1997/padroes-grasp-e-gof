@@ -1,5 +1,6 @@
-package padrao_composite.original;
+package padrao_composto.original;
 
+// Classe que representa uma revista 
 public class Revista { 
     private String titulo; 
     private int edicao; 

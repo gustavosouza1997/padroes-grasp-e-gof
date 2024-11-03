@@ -1,8 +1,9 @@
-package padrao_composite.original;
+package padrao_composto.original;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe Biblioteca sem padrão composto, com código duplicado para  coleções 
 public class Biblioteca { 
     private List<Livro> livros; 
     private List<Revista> revistas; 
