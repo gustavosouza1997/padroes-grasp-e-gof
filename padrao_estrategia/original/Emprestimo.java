@@ -1,7 +1,8 @@
-package padrao_strategy.original;
+package padrao_estrategia.original;
 
 import java.time.LocalDate;
 
+// Classe que representa um empréstimo 
 public class Emprestimo {
     private Object midia;
     private String nomeDoUsuario;

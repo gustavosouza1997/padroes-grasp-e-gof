@@ -1,5 +1,6 @@
-package padrao_strategy.original;
+package padrao_estrategia.adaptado;
 
+// Classe que representa um livro 
 public class Livro {
     private String titulo;
     private String autor;

@@ -1,9 +1,10 @@
-package padrao_strategy.original;
+package padrao_estrategia.original;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe Biblioteca com lógica fixa para calcular multas
 public class Biblioteca {
     private List<Emprestimo> emprestimos;
 

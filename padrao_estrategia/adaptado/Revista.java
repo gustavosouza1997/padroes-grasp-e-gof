@@ -1,5 +1,6 @@
-package padrao_strategy.original;
+package padrao_estrategia.adaptado;
 
+// Classe que representa uma revista
 public class Revista {
     private String titulo;
     private int edicao;
