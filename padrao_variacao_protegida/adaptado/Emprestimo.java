@@ -8,6 +8,7 @@ public class Emprestimo {
     private String nomeDoUsuario; 
     private LocalDate dataDeDevolucao; 
     private boolean devolvido; 
+    // Objeto adaptador que será utilizado para calcular a multa
     private AdaptadorMulta adaptadorMulta;
 
     public Emprestimo(Livro livro, String nomeDoUsuario, LocalDate  dataDeDevolucao, AdaptadorMulta adaptadorMulta) { 

@@ -13,6 +13,7 @@ public class Biblioteca {
     } 
 
     // Adiciona um empréstimo 
+    // Modificado para exigir o tipo de calculo de multa na crição do empréstimo	
     public void registrarEmprestimo(Livro livro, String nomeDoUsuario,  LocalDate dataDeDevolucao, AdaptadorMulta adaptadorMulta) { 
         Emprestimo emprestimo = new Emprestimo(livro, nomeDoUsuario,  dataDeDevolucao, adaptadorMulta); 
         emprestimos.add(emprestimo); 

@@ -23,5 +23,4 @@ public class TesteBibliotecaMalProjetada {
         System.out.println("\nMultas após devolução:");  
         biblioteca.calcularMultas(); 
     } 
-   } 
-   
+}  
