@@ -1,10 +1,10 @@
-package padrao_objeto_unitario.original;
+package padrao_objeto_unitario.adaptado;
 
 public class TesteBibliotecaMalProjetada {
     public static void main(String[] args) {
-        // Duas bibliotecas com diferentes configurações
-        Biblioteca biblioteca1 = new Biblioteca("08:00 - 18:00", 2.0);
-        Biblioteca biblioteca2 = new Biblioteca("09:00 - 17:00", 1.5);
+        // Duas bibliotecas compartilhando a mesma configuração
+        Biblioteca biblioteca1 = new Biblioteca();
+        Biblioteca biblioteca2 = new Biblioteca();
 
         biblioteca1.adicionarLivro("O Senhor dos Anéis");
         biblioteca2.adicionarLivro("1984");

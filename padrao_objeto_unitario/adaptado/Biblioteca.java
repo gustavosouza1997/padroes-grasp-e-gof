@@ -1,15 +1,19 @@
-package padrao_objeto_unitario.original;
+package padrao_objeto_unitario.adaptado;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca {
     private List<String> livros;
-    private ConfiguracaoBiblioteca configuracaoBiblioteca; // Cada biblioteca tem suas próprias configurações
+
+    // Referência à configuração compartilhada
+    private ConfiguracaoBiblioteca configuracaoBiblioteca;
     
-    public Biblioteca(String horarios, double multa) {
+    public Biblioteca() {
         this.livros = new ArrayList<>();
-        this.configuracaoBiblioteca = new ConfiguracaoBiblioteca(horarios, multa);
+
+        // Acessa a única instância de ConfiguracaoBiblioteca
+        this.configuracaoBiblioteca = ConfiguracaoBiblioteca.getInstancia("08:00 - 18:00", 2.0);
     }
 
     // Adiciona um livro à biblioteca
