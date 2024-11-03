@@ -12,9 +12,10 @@ public class Biblioteca {
     } 
 
     // Método mal projetado que cria os empréstimos diretamente  public void registrarEmprestimo(Livro livro, String nomeDoUsuario)  { 
-    Emprestimo emprestimo = new Emprestimo(livro, nomeDoUsuario);  // Código mal projetado 
-    emprestimos.add(emprestimo); 
-    
+    public void registrarEmprestimo(Livro livro, String nomeDoUsuario) { 
+        Emprestimo emprestimo = new Emprestimo(livro, nomeDoUsuario); 
+        emprestimos.add(emprestimo); 
+    }
      
     public void exibirEmprestimos() { 
         for (Emprestimo emprestimo : emprestimos) { 
