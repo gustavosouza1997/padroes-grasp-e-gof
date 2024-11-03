@@ -1,4 +1,4 @@
-package padrao_singleton.original;
+package padrao_objeto_unitario.original;
 
 public class Livro {
     private String titulo;
