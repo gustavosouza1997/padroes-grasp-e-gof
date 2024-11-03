@@ -3,7 +3,7 @@ package padrao_polimorfismo.adaptado;
 import java.util.ArrayList; 
 import java.util.List;
 
-// Classe Biblioteca mal projetada, sem polimorfismo 
+// Classe Biblioteca corrigida com polimorfismo 
 public class Biblioteca { 
     private List<Object> midias; // Lista de mídias misturadas (Livro  e Revista) 
     
