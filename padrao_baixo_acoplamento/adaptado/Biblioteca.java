@@ -2,7 +2,7 @@ package padrao_baixo_acoplamento.adaptado;
 
 import java.time.LocalDate;
 
-// Classe Biblioteca com alto acoplamento 
+// Classe Biblioteca com baixo acoplamento 
 public class Biblioteca { 
     private LivroController livroController;
     private EmprestimoController emprestimoController;
@@ -34,7 +34,7 @@ public class Biblioteca {
         emprestimoController.devolverLivro(livroController.encontrarLivro(tituloDoLivro));
     } 
 
-    // Calcula multas diretamente 
+    // Solicita o calculo de multas utilizando o controller de emprestimos 
     public void calcularMultas() { 
         emprestimoController.calcularMultas();
     } 
