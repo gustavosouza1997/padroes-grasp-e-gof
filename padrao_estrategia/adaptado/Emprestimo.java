@@ -7,9 +7,11 @@ public class Emprestimo {
     private Object midia;
     private String nomeDoUsuario;
     private LocalDate dataDeDevolucao;
+    // Estratégia de cálculo de multa
     private EstrategiaMulta estrategiaMulta;
     private boolean devolvido;
 
+    // Construtor atualizado para receber a estratégia de multa
     public Emprestimo(Object midia, String nomeDoUsuario, LocalDate dataDeDevolucao, EstrategiaMulta estrategiaMulta) {
         this.midia = midia;
         this.nomeDoUsuario = nomeDoUsuario;
@@ -30,6 +32,8 @@ public class Emprestimo {
         return LocalDate.now().toEpochDay() - dataDeDevolucao.toEpochDay();
     }
 
+    // Movido o cálculo da multa para a classe Empréstimo
+    // Pois o objeto empréstimo tem todas as informações necessárias para calcular a multa
     public double calcularMulta() {
         long diasAtraso = calcularDiasAtraso();
         return estrategiaMulta.calcularMulta(diasAtraso);

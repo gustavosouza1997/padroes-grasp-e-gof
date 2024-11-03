@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-// Classe Biblioteca com lógica fixa para calcular multas
+// Classe Biblioteca que usa estratégias de multa
 public class Biblioteca {
     private List<Emprestimo> emprestimos;
 
