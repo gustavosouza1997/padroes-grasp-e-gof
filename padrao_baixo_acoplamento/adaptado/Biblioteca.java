@@ -1,8 +1,6 @@
 package padrao_baixo_acoplamento.adaptado;
 
-import java.time.LocalDate; 
-import java.util.ArrayList; 
-import java.util.List;
+import java.time.LocalDate;
 
 // Classe Biblioteca com alto acoplamento 
 public class Biblioteca { 
