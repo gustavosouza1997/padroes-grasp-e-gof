@@ -1,5 +1,6 @@
-package padrao_factory.original;
+package padrao_fabrica.original;
 
+// Classe que representa um Livro 
 public class Livro {
     private String titulo;
     private String autor;

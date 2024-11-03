@@ -1,8 +1,9 @@
-package padrao_factory.original;
+package padrao_fabrica.original;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe Biblioteca diretamente responsável pela criação das mídias
 public class Biblioteca {
     private List<Object> midias;
     
@@ -18,8 +19,7 @@ public class Biblioteca {
             System.out.println("Livro adicionado: " + titulo);
 
         } else if (tipo.equals("Revista")) {
-            Revista revista = new Revista(titulo,
-            Integer.parseInt(autorOuEdicao)); // Criação manual de Revista
+            Revista revista = new Revista(titulo, Integer.parseInt(autorOuEdicao)); // Criação manual de Revista
             midias.add(revista);
             System.out.println("Revista adicionada: " + titulo);
             
@@ -27,6 +27,7 @@ public class Biblioteca {
             System.out.println("Erro: Tipo de mídia não reconhecido.");
         }
     }
+
     // Exibe todas as mídias
     public void exibirMidias() {
         for (Object midia : midias) {

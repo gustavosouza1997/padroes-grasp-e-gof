@@ -1,5 +1,6 @@
-package padrao_factory.original;
+package padrao_fabrica.original;
 
+// Classe que representa uma Revista 
 public class Revista {
     private String titulo;
     private int edicao;
