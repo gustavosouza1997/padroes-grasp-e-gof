@@ -1,5 +1,6 @@
 package padrao_invencoes_puras.adaptado;
 
+// Implementação de Notificador que envia notificações por email
 public class NotificadorEmail implements Notificador {
     @Override
     public void enviarNotificacao(String destinatario, String assunto, String mensagem) {
